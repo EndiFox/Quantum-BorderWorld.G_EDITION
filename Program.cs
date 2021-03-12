@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows;
+using System.Timers;
 
 
 namespace kaskk
 {
     static class BQWorld
     {
-
 
         public class Item
         {
@@ -67,6 +67,10 @@ namespace kaskk
             //}
         }
 
+        private static System.Timers.Timer aTimer;
+
+        public struct Vector4 : IEquatable<System.Numerics.Vector4>, IFormattable; 
+
 
         [STAThread]
         static void Main()
@@ -76,10 +80,15 @@ namespace kaskk
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new QB());
             
+            //Functions\Timers\Any stuff
+            
             static void dot(float ro, float rd)
             {
                 
             }
+
+            //Functions\Timers\Any stuff
+
             /// Basic ints and arrays
             Random rnd = new Random();
             int w = 1280;
@@ -93,7 +102,6 @@ namespace kaskk
             float[,,] GlItemPos = new float[20000, 20000, 20000];
             int[,] b = new int[39,39];
             int[,] stones_Mass = new int[40, 40];
-
             /// Basic ints and arrays
 
             /// Tree generator 
@@ -113,7 +121,7 @@ namespace kaskk
             ///Stone generator
             for (int i = 0; i != 80; i++)
             {
-                if (i == 78)
+                if (i == 80)
                 {
                     break;
                 }

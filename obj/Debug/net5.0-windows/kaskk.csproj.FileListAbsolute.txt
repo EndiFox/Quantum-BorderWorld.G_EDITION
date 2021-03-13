@@ -6,7 +6,6 @@ C:\Users\Admin\Source\Repos\kaskk\kaskk\bin\Debug\net5.0-windows\kaskk.dll
 C:\Users\Admin\Source\Repos\kaskk\kaskk\bin\Debug\net5.0-windows\ref\kaskk.dll
 C:\Users\Admin\Source\Repos\kaskk\kaskk\bin\Debug\net5.0-windows\kaskk.pdb
 C:\Users\Admin\Source\Repos\kaskk\kaskk\obj\Debug\net5.0-windows\kaskk.csprojAssemblyReference.cache
-C:\Users\Admin\Source\Repos\kaskk\kaskk\obj\Debug\net5.0-windows\kaskk.Form1.resources
 C:\Users\Admin\Source\Repos\kaskk\kaskk\obj\Debug\net5.0-windows\kaskk.csproj.GenerateResource.cache
 C:\Users\Admin\Source\Repos\kaskk\kaskk\obj\Debug\net5.0-windows\kaskk.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Admin\Source\Repos\kaskk\kaskk\obj\Debug\net5.0-windows\kaskk.AssemblyInfoInputs.cache

@@ -70,22 +70,7 @@ namespace kaskk
             int level = 0;
         }
         
-        public class Player
-        {
-            float x = 0.0f;
-            float y = 0.0f;
-            float z = 0.0f;
-            float fov = 3.14159f / 3;
-            float a = 0.0f;
-            float depth = 30.0f;
-            float health = 100.0f;
-            int armor = 0;
-            int hunger = 200;
-            float mana = 10;
-            int[] inventory = new int[10];
-            string[] names = new string[10];
-            int[] ids = new int[10];
-        }
+
 
         private static System.Timers.Timer aTimer;
         
@@ -102,26 +87,75 @@ namespace kaskk
                 throw new NotImplementedException();
             }
         }
+        
+        public class Player
+        {
+            public float x = 0.0f;
+            public float y = 0.0f;
+            public float z = 0.0f;
+            public float fov = 3.14159f / 3;
+            public float a = 0.0f;
+            public float depth = 30.0f;
+            public float health = 100.0f;
+            public int armor = 0;
+            public int hunger = 200;
+            public float mana = 10;
+            public int[] inventory = new int[10];
+            public string[] names = new string[10];
+            public int[] ids = new int[10];
+        }
 
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QB());
-            
             //Functions\Timers\Any stuff
-            
+
+            static float cos(float a, float gip)
+            {
+                float sum = a / gip;
+                return sum;
+            }
+
+            static float sin(float b, float gip)
+            {
+                float sum = b / gip;
+                return sum;
+            }
+
+            static float tg(float anti, float pril)
+            {
+                float sum = anti / pril;
+                return sum;
+            }
+
+            static float ctg(float pril, float anti)
+            {
+                float sum = pril / anti;
+                return sum;
+            }
+
+            static float tg1(float a, float b, float gip)
+            {
+                float a1 = a;
+                float a2 = sin(a1, gip);
+                float b1 = b;
+                float b2 = cos(b1, gip);
+                float sum = a2 / b2;
+                return sum;
+            }
+
+            static float ctg1(float a, float b, float gip)
+            {
+                float a1 = a;
+                float a2 = cos(a1, gip);
+                float b1 = b;
+                float b2 = sin(b1, gip);
+                float sum = a2 / b2;
+                return sum;
+            }
+
             static float dot(float first, float second)
             {
-                
-                static float cos(float a, float gip)
-                {
-                    float sum = a / gip;
-                    return sum;
-                }
-
                 if ((first > 0) & (second > 0))
                 {
                     float c = first * second * cos(first, second);
@@ -156,6 +190,7 @@ namespace kaskk
             //Functions\Timers\Any stuff
 
             /// Basic ints and arrays
+            
             Random rnd = new Random();
             int w = 1280;
             int h = 720;
@@ -168,8 +203,8 @@ namespace kaskk
             float[,,] GlItemPos = new float[200, 200, 200];
             int[,] b = new int[39,39];
             int[,] stones_Mass = new int[40, 40];
-            /// Basic ints and arrays
 
+            /// Basic ints and arrays
             /// Tree generator 
             //for (int i = 0; i != 78; i++)
             //{
@@ -198,19 +233,27 @@ namespace kaskk
             //}
             ///Stone generator
 
-            ///Generator examples
+        ///Generator examples
             Player player1 = new Player();
             Tree tree1 = new Tree();
             ///Generator examples
 
             /// Main program         
+
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new QB());
+
             while (true) 
             {
                 //plaIntersect(4.0f, 2.1f, 4.1f);
 
                 for (int i = 0; i < w; i++) 
                 {
-                    //float fRayAngle = (player1.a - player1.fov / 2.0f) + (Convert.ToInt16(player1.x) / Convert.ToInt16(w)) * player1.fov;
+                    float fRayAngle = (player1.a - (player1.fov / 2.0f)) + (Convert.ToInt16(player1.x) / Convert.ToInt16(w)) * player1.fov;
+                    
+                    //QB.Equals.fRayAngle;
                 }
             }
         }

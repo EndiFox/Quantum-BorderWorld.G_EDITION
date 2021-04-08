@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Quantum-BorderWorlds" Height="720" Width="1280" ResizeMode="NoResize" Cursor="Arrow" WindowStyle="SingleBorderWindow" FontFamily="Lkdown" HorizontalAlignment="Left" VerticalAlignment="Top">
     <Grid x:Name="LayoutRoot" Background="Black">
-        <Canvas Cursor="Arrow" Height="720" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Canvas Cursor="Arrow" Height="720" HorizontalAlignment="Left" VerticalAlignment="Top" AutomationProperties.AcceleratorKey="" Width="1280" KeyDown="Canvas_KeyDown" GotFocus="Canvas_GotFocus"/>
 
     </Grid>
 </Window>

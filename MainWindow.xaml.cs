@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Math;
 
 namespace Q_BF
 {
@@ -21,30 +23,67 @@ namespace Q_BF
     public partial class MainWindow : Window
     {
         private static System.Timers.Timer aTimer;
+
+
         public MainWindow()
         {
             InitializeComponent();
         }
         
-        public class Player
-        {
-            float playerX = 1.0f;
-            float playerY = 1.0f;
-            float playerA = 0.0f;
-            float fov = 3.14159f / 4.0f;
-            float depth = 20.0f;
-            float speed = 5.0f;
-        }
-        public void Proris()
-        {
-            int width = 1280;        
-            int height = 720;         
-            int maxx = 40;             
-            int maxy = 40;
+        Player player1 = new Player();
+        Canvas canvas = new Canvas();
+        Random rnd = new Random();
+        public int width = 1280;
+        public int height = 720;
 
+
+        public void Canvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            System.Timers.Timer timer1 = new System.Timers.Timer();
+            
             while (true)
             {
+                timer1.Start();
 
+                if (e.Key == Key.W)
+                {
+                    player1.playerX = player1.pMove();
+                    player1.playerZ = player1.pMove();
+                }
+                if (e.Key == Key.S)
+                {
+                    player1.playerX = player1.pMove(); 
+                    player1.playerZ = player1.pMove(); 
+                }
+                if (e.Key == Key.D)
+                {
+                    player1.playerZ = (player1.speed * 0.80f) - 2;
+                }
+                if (e.Key == Key.A)
+                {
+                    player1.playerZ = (player1.speed * 0.80f) - 2;
+                }
+                
+                timer1.Stop();
+            }
+
+        }
+
+        //public void Proris()
+        //{
+
+        //}
+       
+
+        public void Canvas_GotFocus(object sender, RoutedEventArgs e)
+        {
+            int maxx = 40;
+            int maxy = 40;
+            System.Timers.Timer timer = new System.Timers.Timer();
+            while (true)
+            {
+                timer.Start();
+                
             }
         }
     }
